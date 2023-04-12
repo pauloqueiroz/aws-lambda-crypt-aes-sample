@@ -7,7 +7,7 @@ const kmsClient = new aws.KMS();
 function encrypt(buffer) {
     return new Promise((resolve, reject) => {
         const params = {
-            KeyId: 'b4d237d5-e595-47db-9aec-771cb25a682f', // The identifier of the CMK to use for encryption. You can use the key ID or Amazon Resource Name (ARN) of the CMK, or the name or ARN of an alias that refers to the CMK.
+            KeyId: 'key-id', // The identifier of the CMK to use for encryption. You can use the key ID or Amazon Resource Name (ARN) of the CMK, or the name or ARN of an alias that refers to the CMK.
             Plaintext: buffer// The data to encrypt.
         };
         kmsClient.encrypt(params, (err, data) => {
