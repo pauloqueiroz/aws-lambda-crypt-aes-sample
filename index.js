@@ -141,7 +141,7 @@ encrypt(new Buffer('abc','utf-8')).then(decrypt).then(plaintext => {
 
 exports.handler = async function (event, context) {
 
-    const target = "api-commons/getTimestamp";  
+    const target = "my-target-name";  
     console.log("EVENT: \n" + JSON.stringify(event, null, 2));
     
     const keyData = await generateDataKey();
